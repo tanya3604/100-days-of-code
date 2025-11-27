@@ -1,0 +1,37 @@
+/* Write a program to print the following pattern:
+
+*
+
+*
+*
+*
+
+*
+*
+*
+*
+*
+
+*
+*
+*
+
+*
+*/
+
+#include <stdio.h>
+int main() {
+    int n = 5;  
+    for (int i = 1; i <= n; i++) {
+        int stars;
+        if (i <= (n+1)/2)
+            stars = 2 * i - 1;   // 1, 3, 5 for first half
+        else
+            stars = 2 * (n - i + 1) - 1; // then 3, 1
+        for (int j = 0; j < stars; j++) {
+            printf("*\n");
+        }
+        printf("\n");
+    }
+    return 0;
+}
